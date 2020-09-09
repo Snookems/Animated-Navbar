@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ --primary-color: #1c1c18;
+}
+
+
+body {
+  background: url('img/background.jpg') rgba(0, 0, 0, .2)  center no-repeat fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  display: flex;
+  margin-top: 30px;
+  list-style-type: none;
+}
+
+ul li a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  position: relative;
+  transition: all .3s;
+}
+
+a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+a:before {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--primary-color);
+  border-width: 0 0 3px 3px;
+  transition: all .3s;
+  opacity: 0;
+}
+
+a:hover:before {
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
+}
+
+a:after{
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--primary-color);
+  border-width: 3px 3px 0 0;
+  transition: all .3s;
+  opacity: 0;
+}
+
+a:hover:after {
+  top: -8px;
+  right: -8px;
+  opacity: 1;
+}
